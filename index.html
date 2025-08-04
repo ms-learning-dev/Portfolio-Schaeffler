@@ -1,332 +1,296 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d6d6d; -webkit-text-stroke: #6d6d6d}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #0000ff; -webkit-text-stroke: #0000ff}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6b0001; -webkit-text-stroke: #6b0001}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #fb0007; -webkit-text-stroke: #fb0007}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000; min-height: 16.0px}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #093c94; -webkit-text-stroke: #093c94}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #18702b; -webkit-text-stroke: #18702b}
-    span.s1 {font-kerning: none; background-color: #ecf1f7}
-    span.s2 {font-kerning: none; color: #fb0007; background-color: #ecf1f7; -webkit-text-stroke: 0px #fb0007}
-    span.s3 {font-kerning: none; color: #2a2a2a; background-color: #ecf1f7; -webkit-text-stroke: 0px #2a2a2a}
-    span.s4 {font-kerning: none; color: #6b0001; background-color: #ecf1f7; -webkit-text-stroke: 0px #6b0001}
-    span.s5 {font-kerning: none; color: #000000; background-color: #ecf1f7; -webkit-text-stroke: 0px #000000}
-    span.s6 {font-kerning: none; color: #0000ff; background-color: #ecf1f7; -webkit-text-stroke: 0px #0000ff}
-    span.s7 {font-kerning: none; color: #18702b; background-color: #ecf1f7; -webkit-text-stroke: 0px #18702b}
-    span.s8 {font-kerning: none; color: #093c94; background-color: #ecf1f7; -webkit-text-stroke: 0px #093c94}
-    span.s9 {font-kerning: none}
-    span.s10 {font-kerning: none; color: #137646; background-color: #ecf1f7; -webkit-text-stroke: 0px #137646}
-    span.s11 {font-kerning: none; color: #6f0ec3; background-color: #ecf1f7; -webkit-text-stroke: 0px #6f0ec3}
-    span.s12 {font-kerning: none; color: #a4450b; background-color: #ecf1f7; -webkit-text-stroke: 0px #a4450b}
-    span.s13 {font-kerning: none; color: #0e6e6d; background-color: #ecf1f7; -webkit-text-stroke: 0px #0e6e6d}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktives Portfolio: Aufbau der CloudCommand Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+        }
+        .brand-teal { color: #64ffda; }
+        .bg-brand-dark-blue { background-color: #0a192f; }
+        .bg-brand-light-navy { background-color: #112240; }
+        .border-brand-teal { border-color: #64ffda; }
+        .text-slate-light { color: #ccd6f6; }
+        .text-slate-medium { color: #8892b0; }
+
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .sticky-graphic-item {
+            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+            opacity: 0.3;
+        }
+        .sticky-graphic-item.is-active {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -21px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #112240;
+            border: 3px solid #64ffda;
+            transition: background-color 0.3s;
+        }
+        .timeline-item.is-visible::before {
+             background-color: #64ffda;
+        }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s4">html</span><span class="s5"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s1">"de"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"scroll-smooth"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">meta</span><span class="s5"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s6">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">meta</span><span class="s5"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s5"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">title</span><span class="s3">&gt;</span><span class="s1">Interaktives Portfolio: Aufbau der CloudCommand Academy</span><span class="s3">&lt;/</span><span class="s4">title</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">script</span><span class="s5"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.jsdelivr.net/npm/chart.js"</span><span class="s3">&gt;&lt;/</span><span class="s4">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">link</span><span class="s5"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"preconnect"</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://fonts.googleapis.com"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">link</span><span class="s5"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"preconnect"</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://fonts.gstatic.com"</span><span class="s5"> </span><span class="s2">crossorigin</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">link</span><span class="s5"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;display=swap"</span><span class="s5"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"stylesheet"</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">body</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s1"> </span><span class="s7">'Inter'</span><span class="s1">, </span><span class="s8">sans-serif</span><span class="s1">;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">background-color:</span><span class="s5"> </span><span class="s8">#0a192f</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> </span><span class="s8">#ccd6f6</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">.brand-teal</span><span class="s1"> { </span><span class="s2">color:</span><span class="s1"> </span><span class="s8">#64ffda</span><span class="s1">; }</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.bg-brand-dark-blue</span><span class="s5"> { </span><span class="s2">background-color:</span><span class="s5"> </span><span class="s8">#0a192f</span><span class="s5">; }</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.bg-brand-light-navy</span><span class="s5"> { </span><span class="s2">background-color:</span><span class="s5"> </span><span class="s8">#112240</span><span class="s5">; }</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.border-brand-teal</span><span class="s5"> { </span><span class="s2">border-color:</span><span class="s5"> </span><span class="s8">#64ffda</span><span class="s5">; }</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.text-slate-light</span><span class="s5"> { </span><span class="s2">color:</span><span class="s5"> </span><span class="s8">#ccd6f6</span><span class="s5">; }</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.text-slate-medium</span><span class="s5"> { </span><span class="s2">color:</span><span class="s5"> </span><span class="s8">#8892b0</span><span class="s5">; }</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.fade-in-section</span><span class="s5"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">opacity:</span><span class="s1"> </span><span class="s10">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform:</span><span class="s1"> </span><span class="s8">translateY(</span><span class="s10">20px</span><span class="s8">)</span><span class="s1">;</span></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s5"> </span><span class="s1">opacity</span><span class="s5"> </span><span class="s10">0.6s</span><span class="s5"> </span><span class="s1">ease-out</span><span class="s5">, </span><span class="s1">transform</span><span class="s5"> </span><span class="s10">0.6s</span><span class="s5"> </span><span class="s1">ease-out</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.fade-in-section.is-visible</span><span class="s5"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">opacity:</span><span class="s1"> </span><span class="s10">1</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform:</span><span class="s1"> </span><span class="s8">translateY(</span><span class="s10">0</span><span class="s8">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.sticky-graphic-item</span><span class="s5"> {</span></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s5"> </span><span class="s1">opacity</span><span class="s5"> </span><span class="s10">0.4s</span><span class="s5"> </span><span class="s1">ease-in-out</span><span class="s5">, </span><span class="s1">transform</span><span class="s5"> </span><span class="s10">0.4s</span><span class="s5"> </span><span class="s1">ease-in-out</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">opacity:</span><span class="s1"> </span><span class="s10">0.3</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.sticky-graphic-item.is-active</span><span class="s5"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">opacity:</span><span class="s1"> </span><span class="s10">1</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform:</span><span class="s1"> </span><span class="s8">scale(</span><span class="s10">1.05</span><span class="s8">)</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.timeline-item::before</span><span class="s5"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">content:</span><span class="s1"> </span><span class="s7">''</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">position:</span><span class="s1"> </span><span class="s8">absolute</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">left:</span><span class="s1"> </span><span class="s10">-21px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">top:</span><span class="s1"> </span><span class="s10">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">width:</span><span class="s1"> </span><span class="s10">20px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">height:</span><span class="s1"> </span><span class="s10">20px</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius:</span><span class="s1"> </span><span class="s10">50%</span><span class="s1">;</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">background-color:</span><span class="s5"> </span><span class="s8">#112240</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border:</span><span class="s1"> </span><span class="s10">3px</span><span class="s1"> </span><span class="s8">solid</span><span class="s1"> </span><span class="s8">#64ffda</span><span class="s1">;</span></p>
-<p class="p7"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s5"> </span><span class="s1">background-color</span><span class="s5"> </span><span class="s10">0.3s</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.timeline-item.is-visible::before</span><span class="s5"> {</span></p>
-<p class="p4"><span class="s5"><span class="Apple-converted-space">             </span></span><span class="s1">background-color:</span><span class="s5"> </span><span class="s8">#64ffda</span><span class="s5">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s4">body</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-brand-dark-blue"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"container mx-auto p-4 md:p-8 max-w-5xl"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">header</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center min-h-screen flex flex-col justify-center items-center"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">h1</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-4xl md:text-6xl font-extrabold brand-teal mb-3"</span><span class="s3">&gt;</span><span class="s5">Projekt-Meisterstück</span><span class="s3">&lt;/</span><span class="s4">h1</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl md:text-3xl font-semibold text-slate-light"</span><span class="s3">&gt;</span><span class="s5">Aufbau der CloudCommand Academy</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-lg text-slate-medium mt-4 max-w-2xl"</span><span class="s3">&gt;</span><span class="s1">Ein strategisches Transformationsprojekt zur Skalierung von Tech-Kompetenzen, erzählt als interaktive Reise.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"mt-12 text-slate-medium animate-bounce"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">svg</span><span class="s5"> </span><span class="s2">xmlns</span><span class="s3">=</span><span class="s1">"http://www.w3.org/2000/svg"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"h-8 w-8 mx-auto"</span><span class="s5"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s5"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s5"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">path</span><span class="s5"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s5"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s5"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s5"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M19 14l-7 7m0 0l-7-7m7 7V3"</span><span class="s5"> </span><span class="s3">/&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">svg</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s3">&gt;</span><span class="s1">Scrollen, um die Geschichte zu entdecken</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">header</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">main</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"space-y-24 md:space-y-48"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">section</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"context"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fade-in-section text-center"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">h2</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl md:text-3xl font-bold text-slate-light mb-4"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"brand-teal"</span><span class="s3">&gt;</span><span class="s5">01.</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s5"> Der Kontext</span><span class="s3">&lt;/</span><span class="s4">h2</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-lg text-slate-medium max-w-3xl mx-auto"</span><span class="s3">&gt;</span><span class="s1">Die CloudCommand GmbH ist ein dynamischer Bildungsanbieter, der sich darauf spezialisiert hat, Tech-Fachkräfte durch intensive Weiterbildungsprogramme fit für den Arbeitsmarkt zu machen. In diesem schnell wachsenden Umfeld entstand die Notwendigkeit für eine skalierbare, interne Lernarchitektur.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">section</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">section</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"challenge"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fade-in-section text-center"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">h2</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl md:text-3xl font-bold text-slate-light mb-4"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"brand-teal"</span><span class="s3">&gt;</span><span class="s5">02.</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s5"> Die Herausforderung</span><span class="s3">&lt;/</span><span class="s4">h2</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-lg text-slate-medium max-w-3xl mx-auto"</span><span class="s3">&gt;</span><span class="s1">Ein schnell wachsendes Tech-Unternehmen ohne standardisierte Lernprozesse. Die Folge: Inkonsistenzen, hoher manueller Aufwand und eine direkte Gefährdung der Skalierbarkeit.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">section</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">section</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"methodology"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fade-in-section"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                 </span></span><span class="s3">&lt;</span><span class="s4">h2</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl md:text-3xl font-bold text-slate-light mb-12 text-center"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"brand-teal"</span><span class="s3">&gt;</span><span class="s5">03.</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s5"> Der strategische Bauplan</span><span class="s3">&lt;/</span><span class="s4">h2</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"md:grid md:grid-cols-2 md:gap-16 items-start"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"md:sticky top-24 h-auto md:h-screen/2"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"addie-graphic"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col space-y-4 p-8 bg-brand-light-navy rounded-lg"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                             </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">data-graphic</span><span class="s3">=</span><span class="s1">"A"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"sticky-graphic-item p-4 rounded-lg text-center border-l-4 border-brand-teal"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-2xl font-bold text-slate-light"</span><span class="s3">&gt;</span><span class="s1">Analyse</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-slate-medium"</span><span class="s3">&gt;</span><span class="s1">Tiefgehende Bedarfsanalyse</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                             </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">data-graphic</span><span class="s3">=</span><span class="s1">"D1"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"sticky-graphic-item p-4 rounded-lg text-center border-l-4 border-brand-teal"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-2xl font-bold text-slate-light"</span><span class="s3">&gt;</span><span class="s1">Design</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-slate-medium"</span><span class="s3">&gt;</span><span class="s1">Entwicklung des didaktischen Konzepts</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                             </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">data-graphic</span><span class="s3">=</span><span class="s1">"D2"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"sticky-graphic-item p-4 rounded-lg text-center border-l-4 border-brand-teal"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-2xl font-bold text-slate-light"</span><span class="s3">&gt;</span><span class="s1">Development</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-slate-medium"</span><span class="s3">&gt;</span><span class="s1">Erstellung der Lerninhalte &amp; Tools</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                             </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">data-graphic</span><span class="s3">=</span><span class="s1">"I"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"sticky-graphic-item p-4 rounded-lg text-center border-l-4 border-brand-teal"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-2xl font-bold text-slate-light"</span><span class="s3">&gt;</span><span class="s1">Implementation</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-slate-medium"</span><span class="s3">&gt;</span><span class="s1">Rollout der Akademie &amp; Pilot-Workshops</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">data-graphic</span><span class="s3">=</span><span class="s1">"E"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"sticky-graphic-item p-4 rounded-lg text-center border-l-4 border-brand-teal"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-2xl font-bold text-slate-light"</span><span class="s3">&gt;</span><span class="s1">Evaluation</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-slate-medium"</span><span class="s3">&gt;</span><span class="s1">Kontinuierliche Erfolgsmessung</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-lg text-slate-medium space-y-48 mt-12 md:mt-0"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"step-text min-h-[30vh]"</span><span class="s5"> </span><span class="s2">data-step</span><span class="s3">=</span><span class="s1">"A"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                           </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-bold text-slate-light mb-2"</span><span class="s3">&gt;</span><span class="s5">Analyse</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                           </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s3">&gt;</span><span class="s1">In enger Abstimmung mit Fachbereichen und Führungsebene wurden die Kernkompetenzen definiert, um eine passgenaue Lösung zu gewährleisten.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"step-text min-h-[30vh]"</span><span class="s5"> </span><span class="s2">data-step</span><span class="s3">=</span><span class="s1">"D1"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                           </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-bold text-slate-light mb-2"</span><span class="s3">&gt;</span><span class="s5">Design</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                           </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s3">&gt;</span><span class="s1">Ein modernes didaktisches Konzept mit Fokus auf Selbstreguliertes Lernen (SRL) wurde entwickelt, um die Eigenverantwortung und den Praxistransfer zu maximieren.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"step-text min-h-[30vh]"</span><span class="s5"> </span><span class="s2">data-step</span><span class="s3">=</span><span class="s1">"D2"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                           </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-bold text-slate-light mb-2"</span><span class="s3">&gt;</span><span class="s5">Development</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                           </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s3">&gt;</span><span class="s1">Alle Lerninhalte wurden erstellt, inklusive praxisnaher Übungsszenarien und der Evaluation innovativer KI-Tools zur Effizienzsteigerung.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"step-text min-h-[30vh]"</span><span class="s5"> </span><span class="s2">data-step</span><span class="s3">=</span><span class="s1">"I"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                           </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-xl font-bold text-slate-light mb-2"</span><span class="s3">&gt;</span><span class="s1">Implementation</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                           </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s3">&gt;</span><span class="s1">Der Rollout umfasste die Einführung des LMS, die Durchführung von Pilot-Workshops und die Schulung der ersten Teilnehmer-Kohorten.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"step-text min-h-[30vh]"</span><span class="s5"> </span><span class="s2">data-step</span><span class="s3">=</span><span class="s1">"E"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                           </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl font-bold text-slate-light mb-2"</span><span class="s3">&gt;</span><span class="s5">Evaluation</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                           </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s3">&gt;</span><span class="s1">Durch die Einführung von KPIs wurde ein System zur kontinuierlichen Erfolgsmessung und iterativen Verbesserung der Lernangebote geschaffen.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">section</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">section</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"results"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fade-in-section"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">h2</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl md:text-3xl font-bold text-slate-light mb-12 text-center"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"brand-teal"</span><span class="s3">&gt;</span><span class="s5">04.</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s5"> Die Transformation: Messbarer Erfolg</span><span class="s3">&lt;/</span><span class="s4">h2</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"grid grid-cols-1 md:grid-cols-2 gap-8"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-brand-light-navy rounded-lg p-8"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-xl font-bold text-slate-light mb-4"</span><span class="s3">&gt;</span><span class="s1">Effizienz-Boost durch KI</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-slate-medium mb-4"</span><span class="s3">&gt;</span><span class="s1">Die Implementierung von KI-Tools reduzierte den Zeitaufwand für die Content-Erstellung um ca. 80% – ein klarer Hebel für Qualität und Skalierbarkeit.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"chart-container h-64 md:h-80"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">canvas</span><span class="s1"> </span><span class="s2">id</span><span class="s3">=</span><span class="s6">"efficiencyChart"</span><span class="s3">&gt;&lt;/</span><span class="s4">canvas</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"bg-brand-light-navy rounded-lg p-8"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-xl font-bold text-slate-light mb-4"</span><span class="s3">&gt;</span><span class="s1">Engagement &amp; Mitarbeiterbindung</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-slate-medium mb-4"</span><span class="s3">&gt;</span><span class="s1">Die strukturierte Lernumgebung und das begleitende Coaching führten zu einer signifikanten Reduzierung der Abbruchquote (Churn Rate).</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"chart-container h-64 md:h-80"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s3">&lt;</span><span class="s4">canvas</span><span class="s1"> </span><span class="s2">id</span><span class="s3">=</span><span class="s6">"churnChart"</span><span class="s3">&gt;&lt;/</span><span class="s4">canvas</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">section</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">section</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"timeline"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fade-in-section"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                 </span></span><span class="s3">&lt;</span><span class="s4">h2</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl md:text-3xl font-bold text-slate-light mb-12 text-center"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"brand-teal"</span><span class="s3">&gt;</span><span class="s5">05.</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s5"> Vom Konzept zur Realität</span><span class="s3">&lt;/</span><span class="s4">h2</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"relative pl-8 border-l-2 border-brand-teal border-opacity-30"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"timeline-item mb-12 fade-in-section"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-xl font-bold brand-teal mb-1"</span><span class="s3">&gt;</span><span class="s1">Monat 1: Kick-off</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-slate-medium"</span><span class="s3">&gt;</span><span class="s1">Start des Projekts, Stakeholder-Alignment und detaillierte Anforderungsanalyse.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                     </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"timeline-item mb-12 fade-in-section"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-xl font-bold brand-teal mb-1"</span><span class="s3">&gt;</span><span class="s1">Monat 3: Konzept &amp; Prototyp</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-slate-medium"</span><span class="s3">&gt;</span><span class="s1">Das didaktische Konzept steht, erste Lerninhalte und KI-Prozesse werden entwickelt.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                     </span></span><span class="s3">&lt;</span><span class="s4">div</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"timeline-item fade-in-section"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">h3</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-xl font-bold brand-teal mb-1"</span><span class="s3">&gt;</span><span class="s1">Monat 6: Launch!</span><span class="s3">&lt;/</span><span class="s4">h3</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-slate-medium"</span><span class="s3">&gt;</span><span class="s1">Die Akademie geht live, die ersten Teilnehmer starten ihre Lernreise in der neuen Umgebung.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">section</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">section</span><span class="s5"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"impact"</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"fade-in-section text-center"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">h2</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-2xl md:text-3xl font-bold text-slate-light mb-4"</span><span class="s3">&gt;&lt;</span><span class="s4">span</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"brand-teal"</span><span class="s3">&gt;</span><span class="s5">06.</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span><span class="s5"> Der nachhaltige Impact</span><span class="s3">&lt;/</span><span class="s4">h2</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-lg text-slate-medium max-w-3xl mx-auto"</span><span class="s3">&gt;</span><span class="s1">Das Projekt schuf nicht nur eine Lernplattform, sondern etablierte die Personalentwicklung als strategischen Partner der Geschäftsführung.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s4">section</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">main</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s4">footer</span><span class="s5"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center mt-24 md:mt-48 py-8 text-slate-medium border-t border-slate-700"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s6">"text-sm italic mb-2"</span><span class="s3">&gt;</span><span class="s1">Hinweis: Dieses Portfolio dient der Veranschaulichung meiner strategischen und methodischen Arbeitsweise. Die dargestellten prozentualen Werte sind zur Wahrung der Vertraulichkeit anonymisiert und als Größenordnung zu verstehen.</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s4">p</span><span class="s3">&gt;</span><span class="s1">&amp;copy; 2025 Martina Sattler | Interaktives Projektportfolio</span><span class="s3">&lt;/</span><span class="s4">p</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s4">footer</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>document.addEventListener(</span><span class="s7">'DOMContentLoaded'</span><span class="s1">, () =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> tooltipTitleCallback = (tooltipItems) =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> item = tooltipItems[</span><span class="s12">0</span><span class="s1">];</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">let</span><span class="s1"> label = item.chart.data.labels[item.dataIndex];</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1"> (</span><span class="s13">Array</span><span class="s1">.isArray(label)) { </span><span class="s11">return</span><span class="s1"> label.join(</span><span class="s7">' '</span><span class="s1">); }</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">return</span><span class="s1"> label;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> chartOptions = {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>responsive: </span><span class="s11">true</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>maintainAspectRatio: </span><span class="s11">false</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>plugins: {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>legend: {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>labels: { color: </span><span class="s7">'#8892b0'</span><span class="s1"> }</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>},</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>tooltip: {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>callbacks: { title: tooltipTitleCallback }</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>},</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> createEfficiencyChart = () =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> ctx = document.getElementById(</span><span class="s7">'efficiencyChart'</span><span class="s1">)?.getContext(</span><span class="s7">'2d'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1">(!ctx) </span><span class="s11">return</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">new</span><span class="s1"> </span><span class="s13">Chart</span><span class="s1">(ctx, {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>type: </span><span class="s7">'doughnut'</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>data: {</span></p>
-<p class="p8"><span class="s5"><span class="Apple-converted-space">                        </span>labels: [</span><span class="s1">'Reduzierter Zeitaufwand'</span><span class="s5">, </span><span class="s1">'Verbleibender Aufwand'</span><span class="s5">],</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>datasets: [{ data: [</span><span class="s12">80</span><span class="s1">, </span><span class="s12">20</span><span class="s1">], backgroundColor: [</span><span class="s7">'#64ffda'</span><span class="s1">, </span><span class="s7">'#112240'</span><span class="s1">], borderColor: </span><span class="s7">'#0a192f'</span><span class="s1">, borderWidth: </span><span class="s12">4</span><span class="s1"> }]</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>},</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>options: { ...chartOptions, cutout: </span><span class="s7">'70%'</span><span class="s1"> }</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> createChurnChart = () =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> ctx = document.getElementById(</span><span class="s7">'churnChart'</span><span class="s1">)?.getContext(</span><span class="s7">'2d'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1">(!ctx) </span><span class="s11">return</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">new</span><span class="s1"> </span><span class="s13">Chart</span><span class="s1">(ctx, {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>type: </span><span class="s7">'bar'</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>data: {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>labels: [</span><span class="s7">'Abbruchquote'</span><span class="s1">],</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>datasets: [</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>{ label: </span><span class="s7">'Vorher'</span><span class="s1">, data: [</span><span class="s12">35</span><span class="s1">], backgroundColor: </span><span class="s7">'#8892b0'</span><span class="s1">, barPercentage: </span><span class="s12">0.5</span><span class="s1"> },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>{ label: </span><span class="s7">'Nachher'</span><span class="s1">, data: [</span><span class="s12">8</span><span class="s1">], backgroundColor: </span><span class="s7">'#64ffda'</span><span class="s1">, barPercentage: </span><span class="s12">0.5</span><span class="s1"> }</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>]</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>},</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>options: {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>...chartOptions,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>scales: {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>y: { beginAtZero: </span><span class="s11">true</span><span class="s1">, grid: { color: </span><span class="s7">'#112240'</span><span class="s1"> }, ticks: { color: </span><span class="s7">'#8892b0'</span><span class="s1">, callback: (value) =&gt; value + </span><span class="s7">'%'</span><span class="s1"> } },</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>x: { grid: { display: </span><span class="s11">false</span><span class="s1"> }, ticks: { color: </span><span class="s7">'#8892b0'</span><span class="s1"> } }</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> observerCallback = (entries, observer) =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>entries.forEach(entry =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">if</span><span class="s1"> (entry.isIntersecting) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>entry.target.classList.add(</span><span class="s7">'is-visible'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> observer = </span><span class="s11">new</span><span class="s1"> </span><span class="s13">IntersectionObserver</span><span class="s1">(observerCallback, { rootMargin: </span><span class="s7">'0px'</span><span class="s1">, threshold: </span><span class="s12">0.1</span><span class="s1"> });</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document.querySelectorAll(</span><span class="s7">'.fade-in-section'</span><span class="s1">).forEach(el =&gt; observer.observe(el));</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> chartObserver = </span><span class="s11">new</span><span class="s1"> </span><span class="s13">IntersectionObserver</span><span class="s1">((entries, chartObs) =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>entries.forEach(entry =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">if</span><span class="s1">(entry.isIntersecting){</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s11">if</span><span class="s1">(entry.target.id === </span><span class="s7">'efficiencyChart'</span><span class="s1">){</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                           </span>createEfficiencyChart();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                         </span></span><span class="s11">if</span><span class="s1">(entry.target.id === </span><span class="s7">'churnChart'</span><span class="s1">){</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                           </span>createChurnChart();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>chartObs.unobserve(entry.target);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}, {threshold: </span><span class="s12">0.5</span><span class="s1">});</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> efficiencyCanvas = document.getElementById(</span><span class="s7">'efficiencyChart'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">if</span><span class="s1">(efficiencyCanvas) chartObserver.observe(efficiencyCanvas);</span></p>
-<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> churnCanvas = document.getElementById(</span><span class="s7">'churnChart'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">if</span><span class="s1">(churnCanvas) chartObserver.observe(churnCanvas);</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> addieObserverCallback = (entries) =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>entries.forEach(entry =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> step = entry.target.dataset.step;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> graphic = document.querySelector(</span><span class="s7">`[data-graphic="</span><span class="s1">${step}</span><span class="s7">"]`</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">if</span><span class="s1"> (entry.isIntersecting &amp;&amp; graphic) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>document.querySelectorAll(</span><span class="s7">'.sticky-graphic-item'</span><span class="s1">).forEach(item =&gt; item.classList.remove(</span><span class="s7">'is-active'</span><span class="s1">));</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>graphic.classList.add(</span><span class="s7">'is-active'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>};</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> addieObserver = </span><span class="s11">new</span><span class="s1"> </span><span class="s13">IntersectionObserver</span><span class="s1">(addieObserverCallback, { rootMargin: </span><span class="s7">'-40% 0px -40% 0px'</span><span class="s1">, threshold: </span><span class="s12">0</span><span class="s1"> });</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>document.querySelectorAll(</span><span class="s7">'.step-text'</span><span class="s1">).forEach(el =&gt; addieObserver.observe(el));</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
-<p class="p3"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s9"></span><br></p>
+<body class="bg-brand-dark-blue">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <header class="text-center min-h-screen flex flex-col justify-center items-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold brand-teal mb-3">Projekt-Meisterstück</h1>
+            <p class="text-xl md:text-3xl font-semibold text-slate-light">Aufbau der CloudCommand Academy</p>
+            <p class="text-lg text-slate-medium mt-4 max-w-2xl">Ein strategisches Transformationsprojekt zur Skalierung von Tech-Kompetenzen, erzählt als interaktive Reise.</p>
+            <div class="mt-12 text-slate-medium animate-bounce">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+                <p>Scrollen, um die Geschichte zu entdecken</p>
+            </div>
+        </header>
+
+        <main class="space-y-24 md:space-y-48">
+
+            <section id="context" class="fade-in-section text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-light mb-4"><span class="brand-teal">01.</span> Der Kontext</h2>
+                <p class="text-lg text-slate-medium max-w-3xl mx-auto">Die CloudCommand GmbH ist ein dynamischer Bildungsanbieter, der sich darauf spezialisiert hat, Tech-Fachkräfte durch intensive Weiterbildungsprogramme fit für den Arbeitsmarkt zu machen. In diesem schnell wachsenden Umfeld entstand die Notwendigkeit für eine skalierbare, interne Lernarchitektur.</p>
+            </section>
+
+            <section id="challenge" class="fade-in-section text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-light mb-4"><span class="brand-teal">02.</span> Die Herausforderung</h2>
+                <p class="text-lg text-slate-medium max-w-3xl mx-auto">Ein schnell wachsendes Tech-Unternehmen ohne standardisierte Lernprozesse. Die Folge: Inkonsistenzen, hoher manueller Aufwand und eine direkte Gefährdung der Skalierbarkeit.</p>
+            </section>
+
+            <section id="methodology" class="fade-in-section">
+                 <h2 class="text-2xl md:text-3xl font-bold text-slate-light mb-12 text-center"><span class="brand-teal">03.</span> Der strategische Bauplan</h2>
+                <div class="md:grid md:grid-cols-2 md:gap-16 items-start">
+                    <div class="md:sticky top-24 h-auto md:h-screen/2">
+                        <div id="addie-graphic" class="flex flex-col space-y-4 p-8 bg-brand-light-navy rounded-lg">
+                             <div data-graphic="A" class="sticky-graphic-item p-4 rounded-lg text-center border-l-4 border-brand-teal">
+                                <p class="text-2xl font-bold text-slate-light">Analyse</p>
+                                <p class="text-slate-medium">Tiefgehende Bedarfsanalyse</p>
+                            </div>
+                             <div data-graphic="D1" class="sticky-graphic-item p-4 rounded-lg text-center border-l-4 border-brand-teal">
+                                <p class="text-2xl font-bold text-slate-light">Design</p>
+                                <p class="text-slate-medium">Entwicklung des didaktischen Konzepts</p>
+                            </div>
+                             <div data-graphic="D2" class="sticky-graphic-item p-4 rounded-lg text-center border-l-4 border-brand-teal">
+                                <p class="text-2xl font-bold text-slate-light">Development</p>
+                                <p class="text-slate-medium">Erstellung der Lerninhalte & Tools</p>
+                            </div>
+                             <div data-graphic="I" class="sticky-graphic-item p-4 rounded-lg text-center border-l-4 border-brand-teal">
+                                <p class="text-2xl font-bold text-slate-light">Implementation</p>
+                                <p class="text-slate-medium">Rollout der Akademie & Pilot-Workshops</p>
+                            </div>
+                            <div data-graphic="E" class="sticky-graphic-item p-4 rounded-lg text-center border-l-4 border-brand-teal">
+                                <p class="text-2xl font-bold text-slate-light">Evaluation</p>
+                                <p class="text-slate-medium">Kontinuierliche Erfolgsmessung</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-lg text-slate-medium space-y-48 mt-12 md:mt-0">
+                        <div class="step-text min-h-[30vh]" data-step="A">
+                           <h3 class="text-xl font-bold text-slate-light mb-2">Analyse</h3>
+                           <p>In enger Abstimmung mit Fachbereichen und Führungsebene wurden die Kernkompetenzen definiert, um eine passgenaue Lösung zu gewährleisten.</p>
+                        </div>
+                        <div class="step-text min-h-[30vh]" data-step="D1">
+                           <h3 class="text-xl font-bold text-slate-light mb-2">Design</h3>
+                           <p>Ein modernes didaktisches Konzept mit Fokus auf Selbstreguliertes Lernen (SRL) wurde entwickelt, um die Eigenverantwortung und den Praxistransfer zu maximieren.</p>
+                        </div>
+                        <div class="step-text min-h-[30vh]" data-step="D2">
+                           <h3 class="text-xl font-bold text-slate-light mb-2">Development</h3>
+                           <p>Alle Lerninhalte wurden erstellt, inklusive praxisnaher Übungsszenarien und der Evaluation innovativer KI-Tools zur Effizienzsteigerung.</p>
+                        </div>
+                        <div class="step-text min-h-[30vh]" data-step="I">
+                           <h3 class="text-xl font-bold text-slate-light mb-2">Implementation</h3>
+                           <p>Der Rollout umfasste die Einführung des LMS, die Durchführung von Pilot-Workshops und die Schulung der ersten Teilnehmer-Kohorten.</p>
+                        </div>
+                        <div class="step-text min-h-[30vh]" data-step="E">
+                           <h3 class="text-xl font-bold text-slate-light mb-2">Evaluation</h3>
+                           <p>Durch die Einführung von KPIs wurde ein System zur kontinuierlichen Erfolgsmessung und iterativen Verbesserung der Lernangebote geschaffen.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="results" class="fade-in-section">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-light mb-12 text-center"><span class="brand-teal">04.</span> Die Transformation: Messbarer Erfolg</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-brand-light-navy rounded-lg p-8">
+                        <h3 class="text-xl font-bold text-slate-light mb-4">Effizienz-Boost durch KI</h3>
+                        <p class="text-slate-medium mb-4">Die Implementierung von KI-Tools reduzierte den Zeitaufwand für die Content-Erstellung um ca. 80% – ein klarer Hebel für Qualität und Skalierbarkeit.</p>
+                        <div class="chart-container h-64 md:h-80">
+                            <canvas id="efficiencyChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-brand-light-navy rounded-lg p-8">
+                        <h3 class="text-xl font-bold text-slate-light mb-4">Engagement & Mitarbeiterbindung</h3>
+                        <p class="text-slate-medium mb-4">Die strukturierte Lernumgebung und das begleitende Coaching führten zu einer signifikanten Reduzierung der Abbruchquote (Churn Rate).</p>
+                        <div class="chart-container h-64 md:h-80">
+                            <canvas id="churnChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="timeline" class="fade-in-section">
+                 <h2 class="text-2xl md:text-3xl font-bold text-slate-light mb-12 text-center"><span class="brand-teal">05.</span> Vom Konzept zur Realität</h2>
+                <div class="relative pl-8 border-l-2 border-brand-teal border-opacity-30">
+                    <div class="timeline-item mb-12 fade-in-section">
+                        <h3 class="text-xl font-bold brand-teal mb-1">Monat 1: Kick-off</h3>
+                        <p class="text-slate-medium">Start des Projekts, Stakeholder-Alignment und detaillierte Anforderungsanalyse.</p>
+                    </div>
+                     <div class="timeline-item mb-12 fade-in-section">
+                        <h3 class="text-xl font-bold brand-teal mb-1">Monat 3: Konzept & Prototyp</h3>
+                        <p class="text-slate-medium">Das didaktische Konzept steht, erste Lerninhalte und KI-Prozesse werden entwickelt.</p>
+                    </div>
+                     <div class="timeline-item fade-in-section">
+                        <h3 class="text-xl font-bold brand-teal mb-1">Monat 6: Launch!</h3>
+                        <p class="text-slate-medium">Die Akademie geht live, die ersten Teilnehmer starten ihre Lernreise in der neuen Umgebung.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="impact" class="fade-in-section text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-light mb-4"><span class="brand-teal">06.</span> Der nachhaltige Impact</h2>
+                <p class="text-lg text-slate-medium max-w-3xl mx-auto">Das Projekt schuf nicht nur eine Lernplattform, sondern etablierte die Personalentwicklung als strategischen Partner der Geschäftsführung.</p>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-24 md:mt-48 py-8 text-slate-medium border-t border-slate-700">
+            <p class="text-sm italic mb-2">Hinweis: Dieses Portfolio dient der Veranschaulichung meiner strategischen und methodischen Arbeitsweise. Die dargestellten prozentualen Werte sind zur Wahrung der Vertraulichkeit anonymisiert und als Größenordnung zu verstehen.</p>
+            <p>&copy; 2025 Martina Sattler | Interaktives Projektportfolio</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) { return label.join(' '); }
+                return label;
+            };
+
+            const chartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: { color: '#8892b0' }
+                    },
+                    tooltip: {
+                        callbacks: { title: tooltipTitleCallback }
+                    }
+                },
+            };
+
+            const createEfficiencyChart = () => {
+                const ctx = document.getElementById('efficiencyChart')?.getContext('2d');
+                if(!ctx) return;
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Reduzierter Zeitaufwand', 'Verbleibender Aufwand'],
+                        datasets: [{ data: [80, 20], backgroundColor: ['#64ffda', '#112240'], borderColor: '#0a192f', borderWidth: 4 }]
+                    },
+                    options: { ...chartOptions, cutout: '70%' }
+                });
+            };
+
+            const createChurnChart = () => {
+                const ctx = document.getElementById('churnChart')?.getContext('2d');
+                if(!ctx) return;
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Abbruchquote'],
+                        datasets: [
+                            { label: 'Vorher', data: [35], backgroundColor: '#8892b0', barPercentage: 0.5 },
+                            { label: 'Nachher', data: [8], backgroundColor: '#64ffda', barPercentage: 0.5 }
+                        ]
+                    },
+                    options: {
+                        ...chartOptions,
+                        scales: {
+                            y: { beginAtZero: true, grid: { color: '#112240' }, ticks: { color: '#8892b0', callback: (value) => value + '%' } },
+                            x: { grid: { display: false }, ticks: { color: '#8892b0' } }
+                        }
+                    }
+                });
+            };
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            };
+            
+            const observer = new IntersectionObserver(observerCallback, { rootMargin: '0px', threshold: 0.1 });
+            document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+            
+            const chartObserver = new IntersectionObserver((entries, chartObs) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        if(entry.target.id === 'efficiencyChart'){
+                           createEfficiencyChart();
+                        }
+                         if(entry.target.id === 'churnChart'){
+                           createChurnChart();
+                        }
+                        chartObs.unobserve(entry.target);
+                    }
+                });
+            }, {threshold: 0.5});
+
+            const efficiencyCanvas = document.getElementById('efficiencyChart');
+            if(efficiencyCanvas) chartObserver.observe(efficiencyCanvas);
+            
+            const churnCanvas = document.getElementById('churnChart');
+            if(churnCanvas) chartObserver.observe(churnCanvas);
+
+
+            const addieObserverCallback = (entries) => {
+                entries.forEach(entry => {
+                    const step = entry.target.dataset.step;
+                    const graphic = document.querySelector(`[data-graphic="${step}"]`);
+                    if (entry.isIntersecting && graphic) {
+                        document.querySelectorAll('.sticky-graphic-item').forEach(item => item.classList.remove('is-active'));
+                        graphic.classList.add('is-active');
+                    }
+                });
+            };
+
+            const addieObserver = new IntersectionObserver(addieObserverCallback, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
+            document.querySelectorAll('.step-text').forEach(el => addieObserver.observe(el));
+        });
+    </script>
+
 </body>
 </html>
